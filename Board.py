@@ -1,1 +1,24 @@
-ÿþ
+#! usr/bin/env
+class Board :
+    def __init__(self) -> None:
+        self.board = []
+        # self.board = [str(i) for i in range(1,10)] #(List Comprehension)
+        for i in range(1,10): self.board.append(str(i))
+    def display_board(self):
+        for i in range(0,9,3):
+            print("|".join(self.board[i:i+3]))
+            if i < 6 : 
+                print("-"*5)
+                
+    def update_board(self,choise,symbol):
+        if self.is_valid_move(choise):
+            self.board[choise -1] = symbol
+            return True
+        return False
+    
+    def is_valid_move(self,choise):
+        return self.board[choise -1].isdigit()
+    
+    def reset_board(self):
+        for i in range(1,10): self.board.append(str(i))
+            
