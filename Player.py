@@ -1,5 +1,8 @@
 #! usr/bin/env
 import os
+def clearScreen():
+    os.system("cls" if os.name == "nt" else "clear")
+
 class Player:
     def __init__(self):
         self.name = ""
@@ -10,7 +13,7 @@ class Player:
             if name.isalpha():
                 self.name = name
                 break
-            os.system("cls")
+            clearScreen()
             print(("-"*33).center(78,' '))
             print("\t\t   Invalid Name. Please use (Letters Only): ")
             print(("-"*33).center(78,' '))
@@ -21,7 +24,7 @@ class Player:
                 self.symbol = symbol.upper()
                 break
             
-            os.system("cls")
+            clearScreen()
             print(("-"*33).center(78,' '))
             print("\t\tInvalid Symbol. Please Choose (A Single Letter): ")
             print(("-"*33).center(78,' '))
