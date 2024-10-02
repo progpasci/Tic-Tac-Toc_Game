@@ -19,12 +19,12 @@ class Menu :
                            "YOU WANT TO PLAY AGAIN ?: ",
                            "1). RESTART GAME.", 
                            "2). QUIT GAME." ]
-        print(("-"*53).center(60,' '))
-        print(f"\t\t\t\t\t  |   {msgEndGameMenu[0]}  |")
-        print(f"\t\t\t\t\t  |\t{("-"*34).center(37,' ')}       |")
-        print(f"\t\t\t\t\t  |\t       {msgEndGameMenu[1]}\t    |")
-        print(f"\t\t\t\t\t  |\t\t  {msgEndGameMenu[2]}\t\t    |")
-        print(f"\t\t\t\t\t  |\t\t  {msgEndGameMenu[3]}\t\t    |")
-        print(("-"*53).center(50,' '))
+        print(("-"*53).center(64,' '))
+        print(f"     |   {msgEndGameMenu[0]}  |")
+        print(f"     |\t   ------------------------------------------    |")
+        print(f"     |\t            {msgEndGameMenu[1]}\t         |")
+        print(f"     |\t\t      {msgEndGameMenu[2]}\t\t         |")
+        print(f"     |\t\t      {msgEndGameMenu[3]}\t\t         |")
+        print(("-"*53).center(64,' '))
         choise = input("\t    Enter Your Choise (1 or 2) :")
         return choise
